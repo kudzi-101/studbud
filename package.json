@@ -2,9 +2,11 @@
   "name": "studbud",
   "version": "1.0.0",
   "description": "Web App for studying",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node index.js",
+    "build": "parcel build ./public/index.html",
+    "dev": "parcel serve ./public/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,6 +25,11 @@
   },
   "homepage": "https://github.com/kudzi-101/studbud#readme",
   "dependencies": {
-    "express": "^4.18.0"
+    "express": "^4.18.0",
+    "sass": "^1.51.0"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.5.0",
+    "parcel": "^2.5.0"
   }
 }
