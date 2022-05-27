@@ -3,6 +3,20 @@ body {
   font-size: 10px;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: #ffde59;
+  padding: 10px 15px;
+}
+
+.topNavigation textarea i {
+  justify-content: center;
+  display: flex;
+}
+
 .topNavigation a {
   text-transform: uppercase;
   color: #000;
@@ -12,16 +26,14 @@ body {
   text-decoration: none;
 }
 
-nav {
-  background-color: #ffde59;
-  padding: 10px 15px;
-}
-
-textarea {
+.textarea {
   resize: none;
   white-space: nowrap;
-  width: 350px;
-  text-decoration: none;
+  width: 250px;
+  height: 25px;
+  background-color: #ffde59;
+  border: none;
+  border-bottom-style: dotted;
   overflow-x: scroll;
 }
 

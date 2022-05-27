@@ -1,6 +1,19 @@
 @import "typography.scss";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@500&display=swap');
 
+
+* { box-sizing: border-box; }
+
+nav {
+    background-color: #FFDE59;
+    padding:10px 15px 10px 15px;
+}
+
+.topNavigation textarea i{
+    display: flex;
+    justify-content: center;
+}
+
 .topNavigation a{ 
     font-size: 42px;
     text-transform: uppercase;
@@ -10,16 +23,17 @@
     color: black;
 }
 
-nav {
+.textarea {
+  
     background-color: #FFDE59;
-    padding:10px 15px 10px 15px;
-}
-
-textarea {
+    border-bottom: dotted;
+    border-top: none;
+    border-left: none;
+    border-right: none;
     resize: none;
-    text-decoration: none;
     white-space: nowrap;
     overflow-x: scroll; 
-    width: 350px;
-    
+    width: 250px;
+    height: 25px;
 }
+
