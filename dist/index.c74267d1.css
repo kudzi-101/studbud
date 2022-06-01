@@ -78,4 +78,27 @@ nav {
   background-color: #fff;
 }
 
+.stopwatchContainer {
+  background-color: #d3d3d3;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.stopwatch {
+  color: #fff;
+  font-size: 64px;
+}
+
+.stopwatchButtons button {
+  cursor: pointer;
+  background-color: #c9e265;
+  border: none;
+  border-radius: 10px;
+  margin: 0 10px;
+  padding: 10px;
+  font-size: 18px;
+}
+
 /*# sourceMappingURL=index.c74267d1.css.map */
