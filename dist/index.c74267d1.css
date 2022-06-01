@@ -52,9 +52,13 @@ nav {
   margin-top: 12px;
 }
 
+.tabs a {
+  text-decoration: none;
+}
+
 .tabs button {
   color: #000;
-  width: 100%;
+  width: 70%;
   text-align: left;
   cursor: pointer;
   transition: .5 ease-in;
