@@ -1,3 +1,28 @@
+
+/* SHOW AND HIDE TIMER TABS */
+function openTab(event, content){
+    let i, tabContent, timerButtons;
+
+    tabContent = document.getElementsByClassName("tabContent");
+    for(i=0; i < tabContent.length; i++){
+        tabContent[i].style.display = "none";
+    }
+
+    timerButtons = document.getElementsByClassName("timerButtons");
+    for(i=0; i < timerButtons.length; i++){
+        timerButtons[i].className = timerButtons[i].className.replace("active","" )
+    }
+
+    document.getElementById(content).style.display = "block";
+    event.currentTarget.className += " active"; 
+}
+
+document.getElementById("defaultOpen").click();
+
+
+
+
+/* STOPWATCH TIMER */
 let milliSecond=0;
 let second=0;
 let minute=0;
@@ -95,90 +120,73 @@ resettBttn.addEventListener('click', resetStopwatch)
 
 /* POMODORO TIMER */
 
-let minString= document.getElementById('min')
-let secString= document.getElementById('sec')
+let Start = document.getElementById('Start');
+let Stop = document.getElementById('Stop');
+let Reset = document.getElementById('Reset');
 
+let sMin = document.getElementById('sMinutes');
+let sSec = document.getElementById('sSeconds');
 
-let startButton= document.getElementById('startButton');
-localStorage.setItem("btn", "session");
+let bMin = document.getElementById('bMinutes');
+let bSec = document.getElementById('bSeconds');
 
-let initial, totalsecs, perc, paused, mins, seconds;
+let startPomodoro;
 
-startBttn.addEventListener("click", () => {
-  let bttn = localStorage.getItem("bttn");
-
-  if (bttn === "session") {
-    mins = +localStorage.getItem("sessionTime") || 1;
-  } else {
-    mins = +localStorage.getItem("breakTime") || 1;
-  }
-
-  seconds = mins * 60;
-  totalsecs = mins * 60;
-  setTimeout(decremenT(), 60);
-  startBttn.style.transform = "scale(0)";
-  paused = false;
-});
-
-function decremenT() {
-    minString.textContent = Math.floor(seconds / 60);
-    secString.textContent = seconds % 60 > 9 ? seconds % 60 : `0${seconds % 60}`;
-  }
-
-  if (seconds > 0) {
-    seconds--;
-    initial = window.setTimeout("decremenT()", 1000);
+Start.addEventListener('click', function(){
+    if(startPomodoro === undefined ){
+        startPomodoro = setInterval(pomodoro, 1000)
+    }else{
+      alert("timer is already running");  
     }
-    else {
-    mins = 0;
-    seconds = 0;
-    let bttn = localStorage.getItem("bttn");
+})
 
-    if (bttn === "session") {
-      startBttn.textContent = "start break";
-      startBttn.classList.add("break");
-      localStorage.setItem("bttn", "break");
-    } else {
-      startBttn.classList.remove("break");
-      startBttn.textContent = "start session";
-      localStorage.setItem("bttn", "session");
+Stop.addEventListener('click', function(){
+    stopInterval()
+    startPomodoro = undefined;
+})
+
+Reset.addEventListener('click', function(){
+    sMin.innerText = 25;
+    sSec.innerText = "00";
+
+    bMin.innerText = 5;
+    bSec.innerText = "00";
+
+    document.getElementById('counter').innerText = 0;
+    stopInterval()
+    startPomodoro = undefined;
+})
+
+function pomodoro(){
+    if(sSec.innerText != 0){
+        sSec.innerText--;
+    } else if(sMin.innerText != 0 && sSec.innerText == 0){
+        sSec.innerText = 59;
+        sMin.innerText--;
     }
 
+    if(sMin.innerText == 0 && sSec.innerText == 0){
+        if(bSec.innerText !=0){
+           bSec.innerText --;
+        } else if(bMin.innerText != 0 && bSec.innerText == 0){
+            bSec.innerText = 59;
+            bMin.innerText--;
+        }   
+    } 
 
-const sessionTimeInput = document.querySelector("#sessionTime");
-const breakTimeInput = document.querySelector("#breakTime");
-const stopBttn = document.querySelector(".pause");
+    if(sMin.innerText == 0 && sSec.innerText == 0 && bMin.innerText == 0 && bSec.innerText == 0){
+        sMin.innerText = 25;
+        sSec.innerText = "00";
 
-sessionTimeInput.value = localStorage.getItem("sessionTime");
-breakTimeInput.value = localStorage.getItem("breakTime");
+        bMin.innerText = 5;
+        bSec.innerText = "00";
 
-document.querySelector("form").addEventListener("submit", (e) => {
-  e.preventDefault();
-  localStorage.setItem("sessionTime", focusTimeInput.value);
-  localStorage.setItem("breakTime", breakTimeInput.value);
-});
+        document.getElementById('counter').innerText++;
+    }
+}
 
-document.querySelector(".reset").addEventListener("click", () => {
-  startBttn.style.transform = "scale(1)";
-  clearTimeout(initial);
-  minString.textContent = 0;
-  secString.textContent = 0;
-});
 
-stopBttn.addEventListener("click", () => {
-  if (paused === undefined) {
-    return;
-  }
-  if (paused) {
-    paused = false;
-    initial = setTimeout("decremenT()", 60);
-    stopBttn.textContent = "stop";
-    stopBttn.classList.remove("resume");
-  } else {
-    clearTimeout(initial);
-    stopBttn.textContent = "resume";
-    stopBttn.classList.add("resume");
-    paused = true;
-  }
-});
-  }
+//Stop Pomodoro function//
+function stopInterval(){
+    clearInterval(startPomodoro);
+}

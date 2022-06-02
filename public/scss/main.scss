@@ -84,7 +84,6 @@ margin-top: 12px;
 }
 
 
-
 .timerContent{
     font-family: "Poppins", sans-serif;
 }
@@ -142,26 +141,59 @@ margin-top: 12px;
     cursor: pointer;
 }
 
-
-
 .pomodoroContainer{
-    margin-top: 10px;
     background-color: lightgray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     height: 550px;
 }
- 
-.Pomodoro{
-    color: black;
-    font-size: 84px;
-    font-weight: 700;
+
+.label {
+    align-self: center;
+    justify-self: center;
+
+    font-size: 30px;
+    font-weight: bold;
 }
 
+#session{
+    grid-area: 1 / 2 / 1 / 2;
+}
+#Interval {
+    grid-area: 1 / 4 / 1 / 4;
+}
+#break {
+    grid-area: 1 / 3 / 1 / 3;
+}
 
-.pomodoroButtons button{
+.pomodoro{
+    display: flex;
+    align-self: center;
+    justify-self: center;
+
+    font-size: 30px;
+    font-weight: bold;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+#breakTimer {
+    grid-area: 2 / 3 / 2 / 3;
+}
+
+#sessionTimer{
+    grid-area: 2 / 2 / 2 / 2;
+}
+#counter{
+    grid-area: 2 / 4 / 2 / 4;
+}
+
+.PomodoroButtons button{
+    display: grid;
     background-color: #C9E265;
     border: none;
     border-radius: 10px;
@@ -169,27 +201,19 @@ margin-top: 12px;
     font-size: 18px;
     margin: 0 10px;
     cursor: pointer;
+    display: block;
+    align-self: center;
+    justify-self: center;
 }
 
-form{
-    
-    padding: 0;
-    margin: 5px auto;
-    display: flex;
-    justify-content: center;
+#Start {
+    grid-area: 3 / 2 / 3 / 2;
 }
 
-form button{
-    background: #C9E265;
-   margin-left: 5px;
-    color: black;
-    border: none;
+#Stop {
+    grid-area: 3 / 3 / 3 / 3;
 }
 
-input{
-    transition: 0.5s ease-in-out;
-    margin: 10px;
-    font-size: 18px;
-    border: none;
-    
+#Reset {
+    grid-area: 3 / 4 / 3 / 4;
 }
