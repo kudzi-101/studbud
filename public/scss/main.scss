@@ -52,7 +52,7 @@ nav {
 .tabs{
 float: left;
 width: 20%;
-height: 300px;
+height: 1000px;
 margin-top: 12px;
 }
 
@@ -85,8 +85,37 @@ margin-top: 12px;
 
 
 
+.timerContent{
+    font-family: "Poppins", sans-serif;
+}
 
+.timerTabs{
+    
+    display: flex;
+    justify-content: flex-start;
+}
 
+.timerTabs button{
+  
+  color: black;
+  padding: 10px;
+  width: 15%;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5 ease-in;
+  font-size: 17px;
+  margin: 15px;
+  margin-left: 0;
+}
+
+.timerContent h1{
+    font-size: 32px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
 
 .stopwatchContainer{
    background-color: lightgray;
@@ -94,11 +123,13 @@ margin-top: 12px;
    justify-content: center;
    align-items: center;
    flex-direction: column;
+   height: 550px;
 }
 
 .stopwatch{
-    color: white;
-    font-size: 64px;
+    color: black;
+    font-size: 84px;
+    font-weight: 700;
 }
 
 .stopwatchButtons button{
@@ -109,4 +140,56 @@ margin-top: 12px;
     font-size: 18px;
     margin: 0 10px;
     cursor: pointer;
+}
+
+
+
+.pomodoroContainer{
+    margin-top: 10px;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 550px;
+}
+ 
+.Pomodoro{
+    color: black;
+    font-size: 84px;
+    font-weight: 700;
+}
+
+
+.pomodoroButtons button{
+    background-color: #C9E265;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 18px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+form{
+    
+    padding: 0;
+    margin: 5px auto;
+    display: flex;
+    justify-content: center;
+}
+
+form button{
+    background: #C9E265;
+   margin-left: 5px;
+    color: black;
+    border: none;
+}
+
+input{
+    transition: 0.5s ease-in-out;
+    margin: 10px;
+    font-size: 18px;
+    border: none;
+    
 }

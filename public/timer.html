@@ -73,17 +73,30 @@
             </div>
         </div>
 
+        <div class = "pomodoroContainer">
+            <div class = "Pomodoro">
+                <span id="min">00</span>:<span id="sec">00</span>
+            </div>
 
+            <div class="pomodoroButtons">
+                <button id="startButton"> Start </button>
+                <button id="stopButton"> Stop </button>
+                <button id="resetButton"> Reset </button>
+            </div>
 
-
-
-
+            <form action = ".">
+                <input type="number" value="1" id="sessionTime"/>
+                <input type="number" value="1" id="breakTime"/>
+                <button type = "submit">Save</button>
+            </form>
+        </div>
 
     </section>
   </main>
 
 
   <script src="script.js"></script>
+  <script src="pomodoroSave.js"></script>
 </body>
 
 </html>
