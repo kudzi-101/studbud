@@ -50,8 +50,16 @@ nav {
 }
 // Music Player//
 
+aside{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin-left: 2%;
+}
 .music-container{
-    height: 100vh;
+    background-color: #CB6CE6;
+    width: 95%;
+    height: 55vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -66,9 +74,9 @@ nav {
 }
 
 .musicImage img {
-    height: 80px;
-    width:100px;
-    border-radius: 5%;
+width: 150px;
+height: 120px;
+border-radius: 5%;
     
 }
 
@@ -80,23 +88,27 @@ nav {
 }
 
 .imageWrapper h2{
-    margin-top: 1rem;
+    margin-top: 5%;
+    margin-bottom: 5%;
     font-size: 1.5rem;
     text-transform: capitalize;
 }
 
 .imageWrapper h6{
-    font-size: 0.9rem;
-    margin-top: 0;
+    font-size: 1.2rem;
+    margin-top: 5%;
+    margin-bottom: 5%;
     font-weight: 400;
-    color: grey;
+    color: black;
 }
 
 
 .musicProgress{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    width: 60%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    width: 90%;
 }
 
 .progress{
@@ -105,7 +117,7 @@ nav {
     margin: 0.8rem;
     cursor: pointer;
     position: relative;
-    background-color: aqua;
+    background-color: #472152;
 }
 
 .progressBar{
@@ -120,8 +132,8 @@ nav {
 .progressHead{
     position: absolute;
     background-color: #fafafa;
-    height: 1.2rem;
-    width: 1.2rem;
+    height: 0.7rem;
+    width: 0.7rem;
     top: 0;
     left: 0;
     transform: translate(-50%, -32%);
@@ -132,23 +144,25 @@ nav {
 
 .currentTime{
     text-align: left;
-    margin-left: 0.5rem;
+    margin-left: 5%;
 }
 
 .duration {
     text-align: end;
-    margin-right: 0.5rem;
+    margin-right: 5%;
 }
 
 .musicButtons{
-    margin-top: 25px;
-    width: 300px;
+    margin-top: 7.5%;
+    margin-bottom: 7.5%;
+    width: 90%;
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .musicButtons button{
+    color: #fafafa;
     cursor: pointer;
     border: unset;
     box-shadow: unset;
@@ -156,12 +170,7 @@ nav {
     font-size: 1.4rem;  
 }
 
-.playSong{
-    background: linear-gradient(to right, #425ef0, #7854fb);
-    text-align: center;
-    border-radius: 100%;
-    padding: 0.3rem 0.3rem;
-}
+
 
 
 
@@ -170,8 +179,8 @@ nav {
 //Side Bar Tabs//
 .tabs{
 float: left;
-width: 20%;
-height: 1000px;
+width: 95%;
+
 margin-top: 12px;
 }
 
@@ -183,7 +192,7 @@ margin-top: 12px;
   display: block; 
   color: black;
   padding:  18px 16px;
-  width: 70%;
+  width: 100%;
   outline: none;
   border: none;
   text-align: left;
@@ -191,6 +200,8 @@ margin-top: 12px;
   transition: 0.5 ease-in;
   font-size: 17px;
   margin: 15px;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .tabs button:hover{
