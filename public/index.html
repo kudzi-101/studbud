@@ -98,11 +98,26 @@
         <h1> Task List </h1>
       </div>
 
+      <div class="modal" id="taskForm">
+        <div class="header">
+          <div class="title">First Modal</div>
+
+          <button class="btn close-modal">&times;</button>
+        </div>
+        <div class="body">
+          <input type="text" id="taskInput">
+          <input type="submit" value= "Add Task" id="taskSubmit">
+
+        </div>
+      </div>
+
+
+
     <div class="kanbanContainer">
 
-      <div class="status">
+      <div class="status" id="noStatus">
         <h1> Tasks </h1> 
-        <button id="addNew"> + Add New</button>
+        <button id="addNew" data-target-modal="#taskForm"> + Add New</button>
 
         <!-- Task Card Class. Informs Js File that this task is draggable-->
         <div class="task" draggable="true">
@@ -125,8 +140,9 @@
 
 
     </div>
-    </section>
 
+    </section>
+    <div id="overlay"></div>
   </main>
 
 
