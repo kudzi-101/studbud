@@ -51,6 +51,7 @@ nav {
 // Music Player//
 
 aside{
+    float: left;
     display: flex;
     flex-direction: column;
     width: 250px;
@@ -213,12 +214,14 @@ margin-top: 12px;
 
 }
 
+//Timer Page//
+
 .timerContent{
     font-family: "Poppins", sans-serif;
+    
 }
 
 .timerTabs{
-    
     display: flex;
     justify-content: flex-start;
 }
@@ -345,4 +348,77 @@ p {
 
 #Reset {
     grid-area: 3 / 4 / 3 / 4;
+}
+
+
+
+
+
+
+.kanbanContainer{
+    background-color: lightgray;
+    display: flex;
+    height: 550px;
+}
+
+.status{
+    width:25%;
+    background-color: #f3f3f3;
+    position: relative;
+    padding: 60px 0.5rem 1rem;
+}
+
+.status h1{
+    position:absolute;
+    top: 0;
+    left: 0;
+    background-color: #343434;
+    color: white;
+    margin: 0;
+    width: 100%;
+    padding: 0.5rem 1rem;
+}
+
+#addNew{
+    padding: 0.5rem 1rem;
+    background-color: white;
+    outline: none;
+    border: none;
+    width: 100%;
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#addNew:hover{
+    background-color: lightgrey;
+}
+
+.task{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background-color: white;
+    box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px,
+    rgba(15, 15, 15, 0.1) 0px 2px 4px;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+}
+
+.task .fa-xmark{
+    position: absolute;
+    right: 1rem;
+    top: 0.4rem;
+    font-size: 2rem;
+    color: #CB6CE6;
+    cursor: pointer;
+}
+
+.task .fa-xmark:hover{
+color: #C9E265;
+
 }

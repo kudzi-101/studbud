@@ -10,46 +10,85 @@
 </head>
 
 <body>
- <!-- Copied Header --> 
-  <header>
-    <nav>
-      <a id="logo" href="/index.html"> studbud </a>
-      <div class="topNavigation">
-        <textarea class="textarea" placeholder="Goal of the day"></textarea>
-        <i class="fa-solid fa-pencil fa-2xl"></i>
+ <!-- STUDBUD header including text input for users to place their goal of the day -->
+ <header>
+  <nav>
+    <a id="logo" href="/index.html"> studbud </a>
+    <div class="topNavigation">
+      <textarea class="textarea" placeholder="Goal of the day"></textarea>
+      <i class="fa-solid fa-pencil fa-2xl"></i>
+    </div>
+  </nav>
+</header>
+
+ <!-- Aside sidebar container including button links to different html pages  -->
+<aside>
+  <div class="tabs">
+
+    <a href="/index.html">
+      <button class="tablinks">
+        <i class="fa-solid fa-table-list"></i>
+        Kanban Board
+      </button>
+    </a>
+
+    <a href="/readingList.html">
+      <button class="tablinks">
+        <i class="fa-solid fa-bookmark"></i>
+        Reading List
+     </button>
+    </a>
+
+    <a href="/timer.html">
+      <button class="tablinks">
+        <i class="fa-solid fa-clock"></i>
+        Timer
+      </button>
+    </a>
+  </div>
+
+  <div class="music-container">
+    <h1> Music Player</h1>
+
+    <div class="imageWrapper">
+      <div class="musicImage">
+        <img src="https://images.unsplash.com/photo-1525362081669-2b476bb628c3?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg" alt="Music image Cover"> 
       </div>
-    </nav>
-  </header>
+    
 
-  <!-- Copied sidebar --> 
-  <aside>
-    <div class="tabs">
-      
-      <a href="/index.html">
-        <button class="tablinks">
-          <i class="fa-solid fa-table-list"></i>
-          Kanban Board
-        </button>
-      </a>
-
-      <a href="/readingList.html">
-        <button class="tablinks">
-          <i class="fa-solid fa-bookmark"></i>
-          Reading List
-       </button>
-      </a>
-
-      <a href="/timer.html">
-        <button class="tablinks">
-          <i class="fa-solid fa-clock"></i>
-          Timer
-        </button>
-      </a>
-
+      <h2 class="musicTitle">Title of audio</h2>
+      <h6 class="musicSinger">Singer name</h6>
     </div>
 
+    <div class="musicProgress">
+      <div class="progress">
+        <div class="progressBar"> </div>
+        <div class="progressHead"> </div>
+      </div>
 
-  </aside>
+      <div class="currentTime">0:00</div>
+      <div class="duration">0:00</div>
+    </div>
+
+    <div class="musicButtons">
+
+      <button class="previousSong">
+        <i class="fa-solid fa-backward-step"></i>
+      </button>
+
+      <button class="playSong">
+        <span> <i class="fa-solid fa-play"></i> </span>
+      </button>
+
+      <button class="nextSong">
+        <i class="fa-solid fa-forward-step"></i>
+      </button>
+      
+    </div>
+
+  </div>
+
+</aside>
 
   <script src="/index.f3bd186e.js"></script>
   <script src="/timer.e3ca1ee3.js"></script>

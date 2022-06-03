@@ -46,6 +46,7 @@ nav {
 }
 
 aside {
+  float: left;
   width: 250px;
   flex-direction: column;
   margin-left: 2%;
@@ -320,6 +321,72 @@ p {
 
 #Reset {
   grid-area: 3 / 4 / 3 / 4;
+}
+
+.kanbanContainer {
+  height: 550px;
+  background-color: #d3d3d3;
+  display: flex;
+}
+
+.status {
+  width: 25%;
+  background-color: #f3f3f3;
+  padding: 60px .5rem 1rem;
+  position: relative;
+}
+
+.status h1 {
+  color: #fff;
+  width: 100%;
+  background-color: #343434;
+  margin: 0;
+  padding: .5rem 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#addNew {
+  width: 100%;
+  cursor: pointer;
+  background-color: #fff;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  margin: .5rem 0;
+  padding: .5rem 1rem;
+  font-size: 1.5rem;
+}
+
+#addNew:hover {
+  background-color: #d3d3d3;
+}
+
+.task {
+  background-color: #fff;
+  border-radius: 4px;
+  justify-content: space-between;
+  align-items: center;
+  margin: .5rem 0;
+  padding: .5rem 1rem;
+  font-size: 1.5rem;
+  display: flex;
+  position: relative;
+  box-shadow: 0 0 0 1px #0f0f0f1a, 0 2px 4px #0f0f0f1a;
+}
+
+.task .fa-xmark {
+  color: #cb6ce6;
+  cursor: pointer;
+  font-size: 2rem;
+  position: absolute;
+  top: .4rem;
+  right: 1rem;
+}
+
+.task .fa-xmark:hover {
+  color: #c9e265;
 }
 
 /*# sourceMappingURL=index.c74267d1.css.map */

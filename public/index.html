@@ -91,9 +91,48 @@
 
   </aside>
 
+  <main>
+    
+      
+      <div class="kanbanHeading">
+        <h1> Task List </h1>
+      </div>
+
+    <div class="kanbanContainer">
+
+      <div class="status">
+        <h1> Tasks </h1> 
+        <button id="addNew"> + Add New</button>
+
+        <!-- Task Card Class. Informs Js File that this task is draggable-->
+        <div class="task" draggable="true">
+          Buy a Pizza
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+
+      <div class="status">
+        <h1> To Start </h1> 
+      </div>
+   
+      <div class="status">
+        <h1> In Progress </h1> 
+      </div>
+
+      <div class="status">
+        <h1> Completed </h1> 
+      </div>
+
+
+    </div>
+    </section>
+
+  </main>
+
 
   <script src="script.js"></script>
   <script src="music.js"></script>
+  <script src="kanban.js"></script>
 </body>
 
 </html>
