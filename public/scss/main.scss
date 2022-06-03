@@ -48,7 +48,126 @@ nav {
     width: 40vw;
     height: 3vh;
 }
+// Music Player//
 
+.music-container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.imageWrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.musicImage img {
+    height: 80px;
+    width:100px;
+    border-radius: 5%;
+    
+}
+
+.musicImage{
+    border-radius: 5%;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.imageWrapper h2{
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.imageWrapper h6{
+    font-size: 0.9rem;
+    margin-top: 0;
+    font-weight: 400;
+    color: grey;
+}
+
+
+.musicProgress{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 60%;
+}
+
+.progress{
+    grid-column: 1 / -1;
+    height: 0.4rem;
+    margin: 0.8rem;
+    cursor: pointer;
+    position: relative;
+    background-color: aqua;
+}
+
+.progressBar{
+  background-color: #fafafa;  
+  height: 100%;
+  width: 100%;
+  position: relative;
+  border-radius: 0.8rem;
+
+}
+
+.progressHead{
+    position: absolute;
+    background-color: #fafafa;
+    height: 1.2rem;
+    width: 1.2rem;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -32%);
+    border-radius: 100%;
+    z-index: 2;
+    box-shadow: 0 0 0 3px grey;
+}
+
+.currentTime{
+    text-align: left;
+    margin-left: 0.5rem;
+}
+
+.duration {
+    text-align: end;
+    margin-right: 0.5rem;
+}
+
+.musicButtons{
+    margin-top: 25px;
+    width: 300px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.musicButtons button{
+    cursor: pointer;
+    border: unset;
+    box-shadow: unset;
+    background-color: unset;
+    font-size: 1.4rem;  
+}
+
+.playSong{
+    background: linear-gradient(to right, #425ef0, #7854fb);
+    text-align: center;
+    border-radius: 100%;
+    padding: 0.3rem 0.3rem;
+}
+
+
+
+
+
+//Side Bar Tabs//
 .tabs{
 float: left;
 width: 20%;
@@ -82,7 +201,6 @@ margin-top: 12px;
     background-color: white; 
 
 }
-
 
 .timerContent{
     font-family: "Poppins", sans-serif;
