@@ -4,7 +4,9 @@
 
 * { box-sizing: border-box; }
 
-/* Navigation bar setup dimensions and colour */
+// HEADER CSS//
+
+/* Header Navigation setup dimensions and colour */
 nav {
     background-color: #FFDE59;
     padding:10px 15px 10px 15px;
@@ -48,8 +50,12 @@ nav {
     width: 40vw;
     height: 3vh;
 }
-// Music Player//
 
+
+
+// START OF ASIDE CONTENT CSS//
+
+/* Positioning Aside Content to stay on the left and organise contents as a column */
 aside{
     float: left;
     display: flex;
@@ -57,7 +63,54 @@ aside{
     width: 250px;
     margin-left: 2%;
 }
+
+//SIDE BAR NAVIGATION TABS CSS//
+
+
+/* Styling of conteents in Tab container to float to the left and sized relatively to the aside container dimension */
+.tabs{
+    float: left;
+    width: 95%;
+    margin-top: 12px;
+    }
+    
+    /* Removes the hyperlink styling within the tab links */
+    .tabs a{
+        text-decoration: none;  
+    }
+    
+    /* Styling of the tab buttons */
+    .tabs button{
+      display: block; 
+      color: black;
+      padding:  18px 16px;
+      width: 100%;
+      outline: none;
+      border: none;
+      text-align: left;
+      cursor: pointer;
+      transition: 0.5 ease-in;
+      font-size: 17px;
+      margin: 15px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    
+    /* Styling of the tab buttons when hovered over*/
+    .tabs button:hover{
+      background-color: lightgray;  
+    }
+    
+    /* Styling of the tab buttons to be white when actively clicked on*/
+    .tabs button:active {
+        background-color: white; 
+    }
+
+// Music Player CSS//
+
+/* Styling of music player containers size, and organisation of display of inside content as a column*/
 .music-container{
+    font-family: "Poppins", sans-serif;
     background-color: #CB6CE6;
     width: 95%;
     height: 55vh;
@@ -67,27 +120,14 @@ aside{
     
 }
 
+/* Image wrapper contains song cover, song title, and artist name. This organises the elements to show up aligned to center and organised as a column*/
 .imageWrapper{
     display: flex;
     align-items: center;
     flex-direction: column;
-    cursor: pointer;
 }
 
-.musicImage img {
-width: 150px;
-height: 120px;
-border-radius: 5%;
-    
-}
-
-.musicImage{
-    border-radius: 5%;
-    padding: 10px;
-    text-align: center;
-    overflow: hidden;
-}
-
+/* Styling for Image wrapper song title html*/
 .imageWrapper h2{
     margin-top: 5%;
     margin-bottom: 5%;
@@ -95,6 +135,7 @@ border-radius: 5%;
     text-transform: capitalize;
 }
 
+/* Styling for Image wrapper artist name html*/
 .imageWrapper h6{
     font-size: 1.2rem;
     margin-top: 5%;
@@ -103,7 +144,22 @@ border-radius: 5%;
     color: black;
 }
 
+/* Styling for music cover container*/
+.musicImage{
+    border-radius: 5%;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+}
 
+/* Styling for music cover image, defining its demension sizing*/
+.musicImage img {
+    width: 150px;
+    height: 120px;
+    border-radius: 5%;
+}
+
+/* music progress bar container containg the head, bar, start and duration times. Defining their dimension sizing within music container and organising the elements to display as a grid*/
 .musicProgress{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -112,6 +168,7 @@ border-radius: 5%;
     width: 90%;
 }
 
+/* styling of progress bar (unloaded)*/
 .progress{
     grid-column: 1 / -1;
     height: 0.4rem;
@@ -121,47 +178,58 @@ border-radius: 5%;
     background-color: #472152;
 }
 
+/* styling of loading progressbar */
 .progressBar{
   background-color: #fafafa;  
   height: 100%;
   width: 100%;
   position: relative;
-  border-radius: 0.8rem;
-
 }
 
+/* creation of circle progress head */
 .progressHead{
+    border-radius: 100%;
+    background-color: purple;
+
+    //Size of progress head//
+    height: 0.8rem;
+    width: 0.8rem;
+
+    //positioning and stacking of progress head relative to progress bar//
     position: absolute;
-    background-color: #fafafa;
-    height: 0.7rem;
-    width: 0.7rem;
+    transform: translate(-50%, -32%);
     top: 0;
     left: 0;
-    transform: translate(-50%, -32%);
-    border-radius: 100%;
     z-index: 2;
-    box-shadow: 0 0 0 3px grey;
 }
 
+/* Styling of music current and duration timing */
+
+// music current progressed time aligned to left //
 .currentTime{
     text-align: left;
     margin-left: 5%;
 }
 
+// Total music duration time aligned to right //
 .duration {
     text-align: end;
     margin-right: 5%;
 }
 
+/* Styling of music previous song, play song, and next song buttons */
 .musicButtons{
     margin-top: 7.5%;
     margin-bottom: 7.5%;
     width: 90%;
+
+    // Aligns buttons at center with a justified space between each other, and within  an inline-level flex container//
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
 }
 
+/* Styling of button element for music buttons */
 .musicButtons button{
     color: #fafafa;
     cursor: pointer;
@@ -171,61 +239,209 @@ border-radius: 5%;
     font-size: 1.4rem;  
 }
 
+// END OF ASIDE CONTENT CSS//
 
+// START OF INDEX.HTML CSS//
 
-
-
-
-
-//Side Bar Tabs//
-.tabs{
-float: left;
-width: 95%;
-
-margin-top: 12px;
+/* styling of Kanban board Container */
+.kanbanContainer{
+    font-family: "Poppins", sans-serif;
+    background-color: lightgray;
+    display: flex;
+    height: 550px;
 }
 
-.tabs a{
-    text-decoration: none;  
+/* Styling of Kanban Task Status Content */
+.status{
+    width:25%;
+    background-color: lightgray;
+    position: relative;
+    padding: 60px 0.5rem 1rem;
 }
 
-.tabs button{
-  display: block; 
-  color: black;
-  padding:  18px 16px;
-  width: 100%;
-  outline: none;
-  border: none;
-  text-align: left;
+/* Styling of Kanban Task Status Headings */
+.status h1{
+    position:absolute;
+    top: 0;
+    left: 0;
+    background-color: #C9E265;
+    color: black;
+    margin: 0;
+    width: 100%;
+    padding: 0.5rem 1rem;
+}
+
+
+/* Styling of Add New Task Button */
+#addNew{
+    font-family: "Poppins", sans-serif;
+    padding: 0.5rem 1rem;
+    background-color:#FFDE59;
+    outline: none;
+    border: none;
+    width: 90%;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+/* Styling of Add New Task Button when Hovered Over */
+#addNew:hover{
+    background-color:#ffde59af;
+}
+
+/* Styling Of Task Card*/
+.task{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background-color: white;
+    box-shadow:rgba(0, 0, 0, 1);
+    border-radius: 4px;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+}
+
+/* Styling  and positioning of Task Card Close sign */
+.task .close{
+    position: absolute;
+    right: 1.2rem;
+    top: 0.25rem;
+    font-size: 1.5rem;
+    color: grey;
+    cursor: pointer;
+}
+
+/* Styling  and positioning of Task Card Close sign when hovered over */
+.task .close:hover{
+color:#FFDE59;
+
+}
+
+/* Styling of Close Button in Popout Modal Form */
+.btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   cursor: pointer;
-  transition: 0.5 ease-in;
-  font-size: 17px;
-  margin: 15px;
-  margin-left: 0;
-  margin-right: 0;
+  outline: none;
 }
 
-.tabs button:hover{
-  background-color: lightgray;  
+/* Styling of Close Button when active to scale down in size */
+.btn:active {
+  transform: scale(0.9);
 }
 
-.tabs button:active {
-    background-color: white; 
-
+/* Styling of Close Button in Popout Modal Form */
+.close-modal {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
 }
 
-//Timer Page//
+/* Styling of Popout Form Content */
+.modal {
+  font-family: "Poppins", sans-serif;
+  width: 450px;
+  position: fixed;
 
+/* Positioning at the center top of page */
+  z-index: 2;
+  top: -50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+/* Transition animation of Popout  */
+  transition: top 0.3s ease-in-out;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+/* Repositioning of Popout Form Top When active */
+.modal.active {
+  top: 15%;
+}
+
+/* Styling of Popout Modal Form Header */
+.modal .header {
+    font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 0.5rem;
+  background-color:lightgrey;
+  border-radius: 4px;
+}
+
+/* Adding Padding to Body Content of Modal body content */
+.modal .body {
+  padding: 15px;
+}
+
+/* Styling Background Overlay, For When Pop Out modal form is clicked */
+#overlay {
+  /* display of element is none when not active */
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Setting Overlay to be displayed when active */
+#overlay.active {
+  display: block;
+}
+
+/* Styling Task input for form */
+#taskInput{
+    padding: 0.5rem 1rem;
+    width: 100%;
+    margin: 0.25rem;
+}
+
+/* Styling Task submit button for form */
+#taskSubmit{
+    background-color: #CB6CE6;
+    color: white;
+    width: 100%;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 10px;
+}
+
+// END OF OF INDEX.HTML CSS//
+
+
+// START OF TIMER.HTML CSS//
+
+/* Setting font of all timer content to be Poppins */
 .timerContent{
     font-family: "Poppins", sans-serif;
     
 }
 
+/* Styling of Timer Heading */
+.timerContent h1{
+    font-size: 32px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+/* Setting Pomodoro and Stopwatch tabs to be positioned at beginning of flex container */
 .timerTabs{
     display: flex;
     justify-content: flex-start;
 }
 
+/* Styling of Pomodoro and Stopwatch tab buttons */
 .timerTabs button{
   
   color: black;
@@ -242,13 +458,11 @@ margin-top: 12px;
   margin-left: 0;
 }
 
-.timerContent h1{
-    font-size: 32px;
-    text-transform: uppercase;
-    margin-bottom: 0;
-}
+//START OF STOPWATCH TAB CSS//
 
+/* Styling of Stopwatch container content to be positioned at the center of the container and organised as a column */
 .stopwatchContainer{
+   
    background-color: lightgray;
    display: flex;
    justify-content: center;
@@ -257,12 +471,14 @@ margin-top: 12px;
    height: 550px;
 }
 
+/* Styling of Stopwatch time numerals */
 .stopwatch{
     color: black;
-    font-size: 84px;
+    font-size: 82px;
     font-weight: 700;
 }
 
+/* Styling of Stopwatch start stop and reset buttons  */
 .stopwatchButtons button{
     background-color: #C9E265;
     border: none;
@@ -273,6 +489,12 @@ margin-top: 12px;
     cursor: pointer;
 }
 
+//END OF STOPWATCH TAB CSS//
+
+
+//START OF POMODORO TAB CSS//
+
+/* Styling of Pomodoro content container content, and making content display as a Grid */
 .pomodoroContainer{
     background-color: lightgray;
     display: grid;
@@ -281,221 +503,93 @@ margin-top: 12px;
     height: 550px;
 }
 
-.label {
-    align-self: center;
-    justify-self: center;
+/* Styling of Session, Break, and Interval Headings*/
 
+.label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     font-size: 30px;
     font-weight: bold;
+    margin-bottom: 0;
+    
 }
 
+/* Positioning of Session Label Heading In Grid */
 #session{
     grid-area: 1 / 2 / 1 / 2;
 }
-#Interval {
-    grid-area: 1 / 4 / 1 / 4;
-}
+
+/* Positioning of Break Label Heading In Grid */
 #break {
     grid-area: 1 / 3 / 1 / 3;
 }
 
+/* Positioning of Interval Label Heading In Grid */
+#Interval {
+    grid-area: 1 / 4 / 1 / 4;
+}
+
+
+/* Positioning of pomodor Session and Break timers and Interval Counter to be justified to center of container*/
 .pomodoro{
-    display: flex;
-    align-self: center;
-    justify-self: center;
-
-    font-size: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 42px;
     font-weight: bold;
+    
 }
 
-p {
-    margin: 0;
-    padding: 0;
+/* Positioning of Session Timer In Grid relative to Session Title Label position */
+#sessionTimer{
+    grid-area: 2 / 2 / 2 / 2;
 }
 
+/* Positioning of Break Timer In Grid relative to Break Title Label position */
 #breakTimer {
     grid-area: 2 / 3 / 2 / 3;
 }
 
-#sessionTimer{
-    grid-area: 2 / 2 / 2 / 2;
-}
+/* Positioning of Interval Counter In Grid relative to Interval Title Label position */
 #counter{
     grid-area: 2 / 4 / 2 / 4;
 }
 
-.PomodoroButtons button{
-    display: grid;
+/* Styling of Pomodoro Buttons */
+.PomodoroButtons{
+    height: 25%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #C9E265;
     border: none;
     border-radius: 10px;
-    padding: 10px;
     font-size: 18px;
     margin: 0 10px;
     cursor: pointer;
-    display: block;
-    align-self: center;
-    justify-self: center;
+   
 }
 
+/* Positioning of Start Button  In Grid */
 #Start {
     grid-area: 3 / 2 / 3 / 2;
 }
 
+/* Positioning of Stop Button  In Grid */
 #Stop {
     grid-area: 3 / 3 / 3 / 3;
 }
 
+/* Positioning of reset Button  In Grid */
 #Reset {
     grid-area: 3 / 4 / 3 / 4;
 }
 
+//END OF POMODORO TAB CSS//
+
+// END OF TIMER.HTML CSS//
 
 
 
-
-
-.kanbanContainer{
-    background-color: lightgray;
-    display: flex;
-    height: 550px;
-}
-
-.status{
-    width:25%;
-    background-color: #f3f3f3;
-    position: relative;
-    padding: 60px 0.5rem 1rem;
-}
-
-.status h1{
-    position:absolute;
-    top: 0;
-    left: 0;
-    background-color: #343434;
-    color: white;
-    margin: 0;
-    width: 100%;
-    padding: 0.5rem 1rem;
-}
-
-#addNew{
-    padding: 0.5rem 1rem;
-    background-color: white;
-    outline: none;
-    border: none;
-    width: 100%;
-    font-size: 1.5rem;
-    margin: 0.5rem 0;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-#addNew:hover{
-    background-color: lightgrey;
-}
-
-.task{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    background-color: white;
-    box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px,
-    rgba(15, 15, 15, 0.1) 0px 2px 4px;
-    border-radius: 4px;
-    font-size: 1.5rem;
-    padding: 0.5rem 1rem;
-    margin: 0.5rem 0;
-}
-
-.task .fa-xmark{
-    position: absolute;
-    right: 1rem;
-    top: 0.4rem;
-    font-size: 2rem;
-    color: #CB6CE6;
-    cursor: pointer;
-}
-
-.task .fa-xmark:hover{
-color: #C9E265;
-
-}
-
-
-.btn {
-  padding: 0.5rem 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  cursor: pointer;
-  outline: none;
-}
-
-.btn:active {
-  transform: scale(0.9);
-}
-
-.close-modal {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-}
-
-.modal {
-  width: 450px;
-  position: fixed;
-  top: -50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: top 0.3s ease-in-out;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  z-index: 2;
-  background-color: #fff;
-}
-
-.modal.active {
-  top: 15%;
-}
-
-.modal .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #ccc;
-  padding: 0.5rem;
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-.modal .body {
-  padding: 0.75rem;
-}
-
-#overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-#overlay.active {
-  display: block;
-}
-
-#taskInput{
-    padding: 0.5rem 1rem;
-    width: 100%;
-    margin: 0.25rem;
-}
-
-
-#taskSubmit{
-    background-color: #CB6CE6;
-    color: white;
-    font-size: 1.25rem;
-    border: none;
-}

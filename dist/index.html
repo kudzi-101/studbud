@@ -100,13 +100,38 @@
 
       <div class="modal" id="taskForm">
         <div class="header">
-          <div class="title">First Modal</div>
+          <div class="title">Create New Task</div>
 
           <button class="btn close-modal">&times;</button>
         </div>
         <div class="body">
+
+          <label for="taskInput">Task Description</label>
           <input type="text" id="taskInput">
+
+          <label class="form-row-label" for="task-name">Priority Rating</label>
+            <select class="form-row-input" name="task-status" id="task-status">
+              <option value="todo">Low</option>
+              <option value="inprogress">Medium</option>
+              <option value="done">High</option>
+            </select>
+
+            <label class="form-row-label" for="task-name">Task Status</label>
+            <select class="form-row-input" name="task-status" id="task-status">
+              <option value="todo">To Start</option>
+              <option value="inprogress">In Progress</option>
+              <option value="done">Completed</option>
+            </select>
+
+            <label for="dueDate">Task Due Date</label>
+            <input type="date" id="dueDate">
+
+            <label for="timeCompletion"> Estimated Completion Time</label>
+            <input type="time" id="timeCompletion">
+
           <input type="submit" value="Add Task" id="taskSubmit">
+
+                
 
         </div>
       </div>
@@ -121,8 +146,8 @@
 
         <!-- Task Card Class. Informs Js File that this task is draggable-->
         <div class="task" draggable="true">
-          Buy a Pizza
-          <i class="fa-solid fa-xmark"></i>
+          Example Card
+          <span class="close">&times;</span>
         </div>
       </div>
 

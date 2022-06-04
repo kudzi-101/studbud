@@ -73,9 +73,9 @@ window.onclick = (event) => {
 };
 
 const taskSubmit = document.getElementById("taskSubmit");
-taskSubmit.addEventListener('click', createTask );
+taskSubmit.addEventListener("click", createTask );
 
-function createTask (s) {
+function createTask () {
     const taskDiv= document.createElement("div");
     const inputValue = document.getElementById("taskInput").value;
     const text = document.createTextNode(inputValue);
@@ -84,26 +84,31 @@ function createTask (s) {
     taskDiv.classList.add("task");
     taskDiv.setAttribute("draggable", "true");
 
-    const i= document.createElement("i");
-    const icon= document.createTextNode("fa-solid fa-xmark");
-    i.classList.add("close");
-    i.appendChild(icon);
-    document.body.appendChild(i)
+    const span = document.createElement("span");
+    const spanText = document.createTextNode("\u00D7");
+    span.classList.add("close");
+    span.appendChild(spanText);
 
-    taskDiv.appendChild(i);
+    taskDiv.appendChild(span);
 
     noStatus.appendChild(taskDiv);
+
+    span.addEventListener("click", () => {
+    span.parentElement.style.display = "none";
+      });
 
     taskForm.classList.remove("active");
     overlay.classList.remove("active");
 
+    document.getElementById('taskInput').value = ""
     taskDiv.addEventListener("dragstart", dragStart);
     taskDiv.addEventListener("dragend", dragEnd);
+    
 }
 
-const close_btns = document.querySelectorAll(".close");
+const closeButtons = document.querySelectorAll(".close");
 
-close_btns.forEach((btn) => {
+closeButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
     btn.parentElement.style.display = "none";
   });
