@@ -22,8 +22,10 @@
     </nav>
   </header>
 
-   <!-- Aside sidebar container including button links to different html pages  -->
+   <!-- Aside sidebar container including button links to different html pages and the music player -->
   <aside>
+
+    <!-- container of all the side navigation tabs-->
     <div class="tabs">
 
       <a href="/index.html">
@@ -48,9 +50,11 @@
       </a>
     </div>
 
+    <!-- container for the music player-->
     <div class="music-container">
       <h1> Music Player</h1>
   
+      <!-- container for the music player cover photo, and audio name and artist name -->
       <div class="imageWrapper">
         <div class="musicImage">
           <img src="https://images.unsplash.com/photo-1525362081669-2b476bb628c3?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg" alt="Music image Cover"> 
@@ -61,6 +65,7 @@
         <h6 class="musicSinger">Singer name</h6>
       </div>
 
+      <!-- container for the music player progress bar , progress head, and current and duration timings of song-->
       <div class="musicProgress">
         <div class="progress">
           <div class="progressBar"> </div>
@@ -71,16 +76,21 @@
         <div class="duration">0:00</div>
       </div>
   
+
+      <!-- container for the music player buttons-->
       <div class="musicButtons">
-  
+        
+        <!-- Previous Song Button-->
         <button class="previousSong">
           <i class="fa-solid fa-backward-step"></i>
         </button>
-  
+        
+        <!-- Play Song Button-->
         <button class="playSong">
           <span> <i class="fa-solid fa-play"></i> </span>
         </button>
-  
+        
+        <!-- Next Song Button-->
         <button class="nextSong">
           <i class="fa-solid fa-forward-step"></i>
         </button>
@@ -91,57 +101,74 @@
 
   </aside>
 
+
+
   <main>
     
-      
+    <!-- container for Kanban Board-->
+    <section class="Kanban">
+
+    <!-- Section Heading Title-->
       <div class="kanbanHeading">
-        <h1> Task List </h1>
+        <h1> Kanban Board </h1>
       </div>
 
+      <!-- Modal Task Form Container-->
       <div class="modal" id="taskForm">
         <div class="header">
-          <div class="title">Create New Task</div>
 
+          <!-- Modal Task Form Title and close button-->
+          <div class="title">Create New Task</div>
           <button class="btn close-modal">&times;</button>
         </div>
+        
+        <!-- Modal Task Form Main Body Container-->
         <div class="body">
 
+          <!-- Task Description Inpput to submit into task card -->
           <label for="taskInput">Task Description</label>
           <input type="text" id="taskInput">
 
-          <label class="form-row-label" for="task-name">Priority Rating</label>
+          <!-- priority rating option selector to submit into task card -->
+          <label for="task-name">Priority Rating</label>
             <select class="form-row-input" name="task-status" id="task-status">
               <option value="todo">Low</option>
               <option value="inprogress">Medium</option>
               <option value="done">High</option>
             </select>
 
-            <label class="form-row-label" for="task-name">Task Status</label>
+          <!-- Task Status option selector to submit into task card -->
+          <label for="task-name">Task Status</label>
             <select class="form-row-input" name="task-status" id="task-status">
               <option value="todo">To Start</option>
               <option value="inprogress">In Progress</option>
               <option value="done">Completed</option>
             </select>
 
-            <label for="dueDate">Task Due Date</label>
+          <!-- Task Date Input for Due Date to submit into task card -->
+          <label for="dueDate">Task Due Date</label>
             <input type="date" id="dueDate">
 
-            <label for="timeCompletion"> Estimated Completion Time</label>
+          <!-- Task Time Input for Estimated Completion Time to submit into task card -->
+          <label for="timeCompletion"> Estimated Completion Time</label>
             <input type="time" id="timeCompletion">
 
+            <!-- Submit Input to input all above fields into task card -->
           <input type="submit" value="Add Task" id="taskSubmit">
-
-                
 
         </div>
       </div>
 
 
-
+    
+    <!-- Kanban board Field Container-->
     <div class="kanbanContainer">
 
+      <!-- Kanban Board Column & Title  -->
       <div class="status" id="noStatus">
         <h1> Tasks </h1> 
+
+        <!-- Add new task card button. Targeted by Task Form-->
         <button id="addNew" data-target-modal="#taskForm"> + Add New</button>
 
         <!-- Task Card Class. Informs Js File that this task is draggable-->
@@ -151,27 +178,33 @@
         </div>
       </div>
 
+      <!-- Kanban Board Column & Title  -->
       <div class="status">
         <h1> To Start </h1> 
       </div>
    
+      <!-- Kanban Board Column & Title  -->
       <div class="status">
         <h1> In Progress </h1> 
       </div>
 
+      <!-- Kanban Board Column & Title  -->
       <div class="status">
         <h1> Completed </h1> 
       </div>
-
-
+      
     </div>
 
-    
+    </section>
+
+    <!-- Page Dark Overlay for when Modal Task Form is activated -->
     <div id="overlay"></div>
+
   </main>
 
 
-  <script src="/index.f3bd186e.js"></script>
+
+  <script src="/timer.f565f920.js"></script>
   <script src="/timer.e3ca1ee3.js"></script>
   <script src="/index.4b67a79d.js"></script>
 </body>

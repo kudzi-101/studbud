@@ -10,7 +10,7 @@
 </head>
 
 <body>
- <!-- STUDBUD header including text input for users to place their goal of the day -->
+ <!-- Copied Header Content from Index.html -->
  <header>
   <nav>
     <a id= "logo" href="index.html"> studbud </a>
@@ -21,8 +21,10 @@
   </nav>
 </header>
 
- <!-- Aside sidebar container including button links to different html pages  -->
+ <!-- Copied Aside content from Index.html -->
   <aside>
+
+    <!-- Side Navigation Tabs -->
     <div class = "tabs">
 
      <a href="index.html">
@@ -47,6 +49,7 @@
       </a>
     </div>
 
+    <!-- Music Player -->
     <div class="music-container">
       <h1> Music Player</h1>
 
@@ -91,122 +94,154 @@
   </aside>
 
   <main>
-
+    <!-- Modal Resource Form Container-->
     <div class="modal" id="resourceForm">
+
       <div class="header">
+
+        <!-- Modal Resource Form Title and close button-->
         <div class="title">Add New Link</div>
         <button class="btn close-modal">&times;</button>
+
       </div>
 
+      <!-- Modal Resourc Form Main Body Container-->
       <div class="body">
 
-        <label for="resourceInput">Title</label>
+       <!-- Resource Title Input to submit into task card -->
+       <label for="resourceInput">Title</label>
         <input type="text" id="resourceInput">
-
+      
+       <!-- Resource Url Input to submit into task card -->
+        <label for="resourceInput"> Url</label>
         <input type="url"id="resourceInput" >
-
-        <input type="submit" value= "Add Task" id="taskSubmit">
+      
+       <!-- Submit Input to input all above fields into task card -->
+       <input type="submit" value= "Add Task" id="resourceSubmit">
 
       </div>
+
     </div>
 
-    <section class="ReadingContent">
+    <!-- Container for Reeading Content -->
+    <section class="ResourceList">
+
+      <!-- Section Title -->
       <h1> Resource List </h1>
 
-        <div class = "resourceTabs">
-            <button class="resourceButtons" onclick="openTab(event, 'vocabulary')" id="defaultOpen">
-                Vocabulary
-            </button>
+      <!-- Container for Resource Tab Buttons -->
+      <div class = "resourceTabs">
 
-            <button class="resourceButtons"  onclick="openTab(event, 'grammar')">
-                Grammar
-            </button>
+        <!-- Vocabulary, Grammar, Reading, and Miscellaneous Topic Tab buttons with Js Intruction to display their respective tabs when clicked -->
+        <!-- Vocabulary Topic Tab is set To be the default displayed/ opened when Timer Page is opened -->
 
-            <button class="resourceButtons"  onclick="openTab(event, 'reading')">
-                Reading
-            </button>
+        <button class="resourceButtons" onclick="openTab(event, 'vocabulary')" id="defaultOpen">
+          Vocabulary
+        </button>
 
-            <button class="resourceButtons"  onclick="openTab(event, 'reading')">
-              miscellaneous
-            </button>
-        </div>
+        <button class="resourceButtons"  onclick="openTab(event, 'grammar')">
+          Grammar
+        </button>
 
-        <div id="vocabulary" class="resourceContent">
-         
-          <div class = "vocabularyContainer">
+        <button class="resourceButtons"  onclick="openTab(event, 'reading')">
+          Reading
+        </button>
 
-            <div class="topic" id="noTopic">
-              <button id="New"  data-target-modal="#resourceForm"> + Add New </button>
-      
-              
-              <div class="resource">
-                Example Link
-              <span class="close">&times;</span>
-              </div>
-            </div>
-      
-          </div>
+        <button class="resourceButtons"  onclick="openTab(event, 'reading')">
+          miscellaneous
+        </button>
       </div>
 
+      <!-- Container for Vocabulary Resource Content -->
+      <div id="vocabulary" class="resourceContent">
+         
+        <!-- Container for Vocabulary Resource Content -->
+        <div class = "vocabularyContainer">
+
+          <div class="topic" id="noTopic">
+            <!-- Add new task card button. Targeted by Resource Form-->
+            <button id="New"  data-target-modal="#resourceForm"> + Add New </button>
+            
+             <!-- Resource Link Caard-->
+            <div class="resource">
+              Example Link
+              <span class="close">&times;</span>
+            </div>
+
+          </div>
+      
+        </div>
+
+      </div>
+
+       
+      <!-- Container for Grammar Resource Content -->
       <div id="grammar" class="resourceContent">
          
         <div class = "GrammarContainer">
 
           <div class="topic" id="noTopic">
+
+            <!-- Add new task card button. Targeted by Resource Form-->
             <button id="New"  data-target-modal="#resourceForm"> + Add New </button>
-    
+            
+            <!-- Resource Link Caard-->
             <div class="resource">
               Example Link
             <span class="close">&times;</span>
             </div>
+
           </div>
     
         </div>
-    </div>
 
+      </div>
 
-    <div id="reading" class="resourceContent">
+      <!-- Container for Reading Resource Content -->
+      <div id="reading" class="resourceContent">
          
-      <div class = "ReadingContainer">
+        <div class = "ReadingContainer">
 
-        <div class="topic" id="noTopic">
-          <button id="New"  data-target-modal="#resourceForm"> + Add New </button>
+         <div class="topic" id="noTopic">
+            <!-- Add new task card button. Targeted by Resource Form-->
+            <button id="New"  data-target-modal="#resourceForm"> + Add New </button>
   
-          
-          <div class="resource">
-            Example Link
-          <span class="close">&times;</span>
+            <!-- Resource Link Caard-->
+            <div class="resource">
+              Example Link
+              <span class="close">&times;</span>
+            </div>
           </div>
-        </div>
   
-      </div>
-  </div>
-
-
-  <div id="miscellaneous" class="resourceContent">
-         
-    <div class = "miscellaneousContainer">
-
-      <div class="topic" id="noTopic">
-        <button id="New"  data-target-modal="#resourceForm"> + Add New </button>
-
-        
-        <div class="resource">
-          Example Link
-        <span class="close">&times;</span>
         </div>
+
       </div>
 
-    </div>
-</div>
+      <!-- Container for Miscellaneous Resource Content -->
+      <div id="miscellaneous" class="resourceContent">
+         
+        <div class = "miscellaneousContainer">
 
-        
+          <div class="topic" id="noTopic">
+            <!-- Add new task card button. Targeted by Resource Form-->
+            <button id="New"  data-target-modal="#resourceForm"> + Add New </button>
 
+             <!-- Resource Link Caard-->
+            <div class="resource">
+              Example Link
+             <span class="close">&times;</span>
+           </div>
+
+          </div>
+
+        </div>
+
+      </div>
 
     </section>
   </main>
 
-  <script src="script.js"></script>
+  <script src="timer.js"></script>
   <script src="music.js"></script>
   <script src="reading.js"></script>
 </body>

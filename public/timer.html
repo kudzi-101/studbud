@@ -10,7 +10,7 @@
 </head>
 
 <body>
- <!-- STUDBUD header including text input for users to place their goal of the day -->
+ <!-- Copied Header Content from Index.html -->
  <header>
   <nav>
     <a id= "logo" href="index.html"> studbud </a>
@@ -21,8 +21,10 @@
   </nav>
 </header>
 
- <!-- Aside sidebar container including button links to different html pages  -->
+ <!-- Copied Aside content from Index.html -->
 <aside>
+
+   <!-- Side Navigation Tabs -->
   <div class = "tabs">
 
     <a href="index.html">
@@ -47,6 +49,7 @@
     </a>
   </div>
 
+  <!-- Music Player -->
   <div class="music-container">
     <h1> Music Player</h1>
 
@@ -94,45 +97,65 @@
   
 
   <main>
+    <!-- Timer Section Container containing both Stopwatch and Pomodero Timer -->
     <section class="timerContent">
-        <h1> Timer </h1>
-        <div class = "timerTabs">
-            <button class="timerButtons" onclick="openTab(event, 'pTimer')" id="defaultOpen">
-                Pomodoro
-            </button>
+      <h1> Timer </h1>
 
-            <button class="timerButtons"  onclick="openTab(event, 'sTimer')">
-                Stopwatch
-            </button>
-        </div>
-        <div id="sTimer" class="tabContent">
-            <div class = "stopwatchContainer">
-             <div class = "stopwatch">
-                   <span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span>.<span id="milliSecond">00</span>
-             </div>
+      <!-- Pomodoro and Stopwatch Tab buttons, with Js Intruction to display their respective tabs when clicked -->
+      <!-- Pomodoro Timer is set To be the default displayed/ opened when Timer Page is opened -->
 
-             <div class="stopwatchButtons">
-                 <button id="start"> Start </button>
-                 <button id="stop"> Stop </button>
-                 <button id="reset"> Reset </button>
-             </div>
+      <div class = "timerTabs">
+        <button class="timerButtons" onclick="openTab(event, 'pTimer')" id="defaultOpen">
+          Pomodoro
+        </button>
+
+        <button class="timerButtons"  onclick="openTab(event, 'sTimer')">
+          Stopwatch
+        </button>
+      </div>
+
+      <!-- Tab content Container for Stopwatch Timer -->
+      <div id="sTimer" class="tabContent">
+        <div class = "stopwatchContainer">
+
+          <!-- Container for the time numerals  -->
+          <div class = "stopwatch">
+            <span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span>.<span id="milliSecond">00</span>
+          </div>
+
+          <!-- Container for stopwatch Buttons -->
+          <div class="stopwatchButtons">
+            <button id="start"> Start </button>
+            <button id="stop"> Stop </button>
+            <button id="reset"> Reset </button>
+          </div>
+
             </div>
         </div>
 
+        <!-- Tab content Container for Stopwatch Timer -->
         <div div id="pTimer" class="tabContent">
+
+          <!-- Container for the pomodoro elements -->
             <div class = "pomodoroContainer">
+
+               <!-- Session, Break, and Interval Titles -->
                 <p id="session" class="label">Session:</p> <p id="break" class="label">Break:</p> <p id="Interval" class="label"> Interval:</p>
+                
+                <!-- Container for session time numerals -->
                 <div id="sessionTimer" class="pomodoro">
                     <span id="sMinutes">25</span> <span id="colon">:</span> <span id="sSeconds">00</span>
                 </div>
 
+                <!-- Container for Break time numerals -->
                 <div id="breakTimer" class="pomodoro">
                  <span id="bMinutes">5</span> <span id="colon">:</span> <span id="bSeconds">00</span>
                 </div>
 
-             <p id="counter" class="pomodoro">0</p>
+              <!-- Pomodoro Interval number Counter-->
+              <p id="counter" class="pomodoro">0</p>
 
-                
+              <!-- Pomodoro Buttonns-->
               <button id="Start" class="PomodoroButtons"> Start </button>
               <button id="Stop" class="PomodoroButtons"> Stop </button>
               <button id="Reset" class="PomodoroButtons"> Reset </button>
@@ -147,7 +170,7 @@
   </main>
 
 
-  <script src="script.js"></script>
+  <script src="timer.js"></script>
   <script src="music.js"></script>
 </body>
 
