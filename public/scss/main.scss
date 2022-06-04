@@ -65,7 +65,7 @@ aside{
 }
 
 //SIDE BAR NAVIGATION TABS CSS//
-
+// Refernece: HMA WebDesign. (2021). How to Build Vertical Tabs in HTML and CSS | Animated Vertical Tabs in HTML and JavaScript [Video]. Retrieved from https://youtu.be/4fzLRXUbkcM.//
 
 /* Styling of conteents in Tab container to float to the left and sized relatively to the aside container dimension */
 .tabs{
@@ -107,6 +107,7 @@ aside{
     }
 
 // Music Player CSS//
+// Reference: Thelle Codes. (2022). Create A Music Player Using HTML CSS & Vanilla JavaScript [Video]. Retrieved from https://youtu.be/bxbidND_jrQ.//
 
 /* Styling of music player containers size, and organisation of display of inside content as a column*/
 .music-container{
@@ -241,9 +242,17 @@ aside{
 
 // END OF ASIDE CONTENT CSS//
 
+
+
 // START OF INDEX.HTML CSS//
+//reference:Basir Payenda. (2020). To Do App Using HTML, CSS and JavaScript (Drag & Drop)|Project #10/100 [Video]. Retrieved from https://youtu.be/m3StLl-H4CY.//
 
 /* styling of Kanban board Container */
+
+.kanbanHeading{
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+}
 .kanbanContainer{
     font-family: "Poppins", sans-serif;
     background-color: lightgray;
@@ -459,6 +468,7 @@ color:#FFDE59;
 }
 
 //START OF STOPWATCH TAB CSS//
+//Reference: Ashiqur Rahman Pranto. (2022). Stopwatch using HTML, CSS and JavaScript | JavaScript Project [Video]. Retrieved from https://youtu.be/TZaVhmoMHek.//@at-root//
 
 /* Styling of Stopwatch container content to be positioned at the center of the container and organised as a column */
 .stopwatchContainer{
@@ -493,6 +503,8 @@ color:#FFDE59;
 
 
 //START OF POMODORO TAB CSS//
+
+// Reference: learn-webdev. (2020). Pomodoro Timer | Javascript Beginner Project Tutorial [Video]. Retrieved from https://youtu.be/vAEG6OVCass. //
 
 /* Styling of Pomodoro content container content, and making content display as a Grid */
 .pomodoroContainer{
@@ -591,5 +603,34 @@ color:#FFDE59;
 
 // END OF TIMER.HTML CSS//
 
+
+.ResourceList h1{
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+}
+
+.resourceButtons{
+    color: black;
+  padding: 10px;
+  width: 15%;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5 ease-in;
+  font-size: 17px;
+  margin: 15px;
+  margin-left: 0;
+
+}
+
+.resourceContent{
+    font-family: "Poppins", sans-serif;
+    background-color: lightgray;
+    display: inline-flex;
+    height: 550px;
+
+}
 
 

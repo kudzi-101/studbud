@@ -1,5 +1,6 @@
 
 /* SHOW AND HIDE RESOURCE LIST TABS */
+// Reference: HMA WebDesign. (2021). How to Build Vertical Tabs in HTML and CSS | Animated Vertical Tabs in HTML and JavaScript [Video]. Retrieved from https://youtu.be/4fzLRXUbkcM.//
 
 function openTab(event, content){
 

@@ -193,6 +193,11 @@ aside {
   font-size: 1.4rem;
 }
 
+.kanbanHeading {
+  font-family: Poppins, sans-serif;
+  font-size: 25px;
+}
+
 .kanbanContainer {
   height: 550px;
   background-color: #d3d3d3;
@@ -468,6 +473,32 @@ aside {
 
 #Reset {
   grid-area: 3 / 4 / 3 / 4;
+}
+
+.ResourceList h1 {
+  font-family: Poppins, sans-serif;
+  font-size: 25px;
+}
+
+.resourceButtons {
+  color: #000;
+  width: 15%;
+  text-align: center;
+  cursor: pointer;
+  transition: .5 ease-in;
+  border: none;
+  border-radius: 15px;
+  outline: none;
+  margin: 15px 15px 15px 0;
+  padding: 10px;
+  font-size: 17px;
+}
+
+.resourceContent {
+  height: 550px;
+  background-color: #d3d3d3;
+  font-family: Poppins, sans-serif;
+  display: inline-flex;
 }
 
 /*# sourceMappingURL=index.c74267d1.css.map */

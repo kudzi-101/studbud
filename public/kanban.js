@@ -1,3 +1,6 @@
+//Reference: Basir Payenda. (2020). To Do App Using HTML, CSS and JavaScript (Drag & Drop)|Project #10/100 [Video]. Retrieved from https://youtu.be/m3StLl-H4CY.//
+//Reference: Creating a Kanban Board with HTML, CSS & JavaScript. Karthik Dev Articles. (2021). Retrieved from https://karthikdevarticles.com/creating-a-kanban-board-with-html-css-and-javascript//
+
 // returns the task card class//
 const tasks = document.querySelectorAll(".task")
 

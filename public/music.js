@@ -1,3 +1,6 @@
+// Reference: Thelle Codes. (2022). Create A Music Player Using HTML CSS & Vanilla JavaScript [Video]. Retrieved from https://youtu.be/bxbidND_jrQ.
+// Reference Create a Music Player using JavaScript - GeeksforGeeks. GeeksforGeeks. (2022). Retrieved from https://www.geeksforgeeks.org/create-a-music-player-using-javascript/.//
+
 // returns the play song button class as the variable playSong //
 const playSong = document.querySelector(".playSong");
 

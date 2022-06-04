@@ -1,5 +1,6 @@
 
 /* SHOW AND HIDE TIMER TABS */
+// Reference: HMA WebDesign. (2021). How to Build Vertical Tabs in HTML and CSS | Animated Vertical Tabs in HTML and JavaScript [Video]. Retrieved from https://youtu.be/4fzLRXUbkcM.//
 function openTab(event, content){
 
     //initialising variables
@@ -32,6 +33,7 @@ document.getElementById("defaultOpen").click();
 
 
 /* STOPWATCH TIMER */
+// Reference: Ashiqur Rahman Pranto. (2022). Stopwatch using HTML, CSS and JavaScript | JavaScript Project [Video]. Retrieved from https://youtu.be/TZaVhmoMHek.//
 
 //Intitialising values//
 let milliSecond=0;
@@ -153,7 +155,7 @@ resettBttn.addEventListener('click', resetStopwatch)
 
 
 /* POMODORO TIMER */
-
+// Reference: learn-webdev. (2020). Pomodoro Timer | Javascript Beginner Project Tutorial [Video]. Retrieved from https://youtu.be/vAEG6OVCass.//
 
 //returning element id to variables//
 let Start = document.getElementById('Start');
